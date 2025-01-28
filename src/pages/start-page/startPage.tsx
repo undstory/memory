@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './startPage.scss';
-import { Button } from '../components/ui/button';
+import { Button } from '../../components/ui/button';
+import { Link } from "react-router";
+import { useNavigate } from "react-router";
 
 const StartPage: React.FC = () => {
-
+  const navigate = useNavigate();
   const [ settings, setSettings ] = useState({
     theme: 'Numbers',
     players: '1',
@@ -15,8 +17,13 @@ const StartPage: React.FC = () => {
       ...prev,
       [category]: value
     }))
+
   }
 
+
+  const handleGame = () => {
+    navigate("/game")
+  }
 
   return (
     <div className="big-container">
@@ -58,7 +65,7 @@ const StartPage: React.FC = () => {
 
           }
         </div>
-        <Button className="button-big" onClick={() => console.log(settings)} label='Start Game' />
+        <Button className="button-big" onClick={handleGame} label='Start Game' />
       </div>
       </div>
     </div>

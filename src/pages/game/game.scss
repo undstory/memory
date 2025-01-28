@@ -1,0 +1,18 @@
+@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as mixin;
+
+.big-container {
+    width:100%;
+    min-height: 100vh;
+    background-color: vars.$white;
+}
+
+.content-wrapper {
+    padding: 67px 165px;
+}
+
+.main-header {
+    color: vars.$black;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-5;
+}

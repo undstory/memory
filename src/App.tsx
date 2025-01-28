@@ -1,13 +1,17 @@
+import { StartPage } from "./pages/start-page";
+import { Game } from "./pages/game";
+import { Routes, Route } from 'react-router-dom';
 
-import { StartPage } from './pages';
+
 
 function App() {
 
 
   return (
-    <>
-      <StartPage />
-    </>
+    <Routes>
+    <Route path="/" element={<StartPage />} />
+    <Route path="/game" element={<Game />} />
+  </Routes>
   )
 }
 
