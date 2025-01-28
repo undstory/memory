@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './startPage.scss';
 import { Button } from '../../components/ui/button';
-import { Link } from "react-router";
 import { useNavigate } from "react-router";
 
 const StartPage: React.FC = () => {
