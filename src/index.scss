@@ -1,0 +1,25 @@
+@use './styles/_variables' as vars;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styl globalny dla linków */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Możesz dodać inne globalne style, jak np. na całe strony */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: vars.$font-primary;
+  font-size: 18px;
+  font-weight: vars.$font-weight-bold;
+  line-height: vars.$line-height-base;
+}

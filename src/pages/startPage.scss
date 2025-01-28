@@ -1,0 +1,49 @@
+@use '../styles/variables' as vars;
+@use '../styles/mixins' as mixin;
+
+.big-container {
+    width:100%;
+    min-height: 100vh;
+    background-color: vars.$black;
+}
+
+.content-wrapper {
+    @include mixin.center-column;
+    padding-bottom: 30px;
+}
+
+.main-header {
+    text-align: center;
+    color: vars.$white;
+    padding: 20px;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-5;
+}
+
+.box-wrapper {
+    background-color: vars.$white;
+    padding: 56px;
+    width: min-content;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.labels {
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-4;
+    color: vars.$grey;
+    padding-bottom: 16px;
+
+    &:not(:first-child) {
+        padding-top: 33px;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-big {
+    margin-top: 33px;
+}

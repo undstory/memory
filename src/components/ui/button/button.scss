@@ -1,0 +1,27 @@
+@use '../../../styles/_variables' as vars;
+@use '../../../styles/_mixins' as mix;
+
+.button-primary {
+    @include mix.button(vars.$orange, vars.$white, vars.$orange-hover, vars.$white, vars.$small-width, vars.$small-height, vars.$font-size-4);
+  }
+
+.button-secondary {
+    @include mix.button(vars.$grey-lighter, vars.$white, vars.$blue, vars.$white, vars.$small-width, vars.$small-height, vars.$font-size-3);
+}
+
+.button-big {
+    @include mix.button(vars.$orange, vars.$white, vars.$orange-hover, vars.$white, vars.$big-width, vars.$big-height, vars.$font-size-2)
+}
+
+.button-selection {
+    @include mix.button(vars.$grey-lighter, vars.$white, vars.$blue, vars.$white, vars.$selection-width, vars.$selection-height, vars.$font-size-3)
+}
+
+.active {
+    background-color: vars.$black;
+    color: vars.$white;
+    &:hover {
+        background-color: vars.$black
+    }
+}
+

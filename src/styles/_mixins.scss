@@ -1,0 +1,37 @@
+@use './variables' as vars;
+
+@mixin center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin button($bg-color, $text-color, $hover-color, $hover-text-color, $btn-width, $btn-height, $font-size) {
+    background-color: $bg-color;
+    color: $text-color;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: $btn-width;
+    height: $btn-height;
+    border-radius: 35px;
+    font-family: vars.$font-primary;
+    font-weight: vars.$font-weight-bold;
+    font-size: $font-size;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color;
+      color: $hover-text-color
+    }
+  }
+
